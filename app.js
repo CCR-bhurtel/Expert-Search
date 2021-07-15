@@ -7,7 +7,7 @@ const fs = require('fs');
 const app = express();
 app.use(cors());
 
-app.use('/public', express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 app.use(express.json({ exteded: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
