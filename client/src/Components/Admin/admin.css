@@ -1,0 +1,238 @@
+.results {
+  margin: 20px 30px;
+}
+.total {
+  weight: 400;
+  font-size: 20px;
+  color: rgba(152, 176, 190, 1);
+}
+
+.content_items {
+  background: #fff;
+  margin: 10px 20px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  min-width: 99%;
+  width: fit-content;
+}
+
+.search input {
+  padding: 10px 25px;
+
+  height: 25px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  width: 300px;
+}
+
+.search input::placeholder {
+  color: rgba(152, 176, 190, 1);
+}
+.content_items :nth-child(odd) {
+  background: rgba(251, 251, 251, 1);
+}
+
+.content_items :nth-child(even) {
+  background: #f7f7f7;
+}
+
+.single_item {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: rgba(24, 56, 76, 1);
+}
+
+.single_item .details div:not(:first-child) {
+  margin-left: 20px;
+  text-align: center;
+}
+.actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.actions div:not(:last-child) {
+  margin-right: 20px;
+}
+
+.actions div {
+  color: rgba(17, 75, 224, 1);
+  cursor: pointer;
+}
+
+.approve:hover {
+  color: #24f035;
+}
+
+.decline:hover {
+  color: #ff0f0f;
+}
+
+.row1,
+.row2 {
+  display: flex;
+}
+
+.modifyExpert {
+  margin: 4rem 2rem;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1rem;
+  color: rgba(24, 56, 76, 1);
+}
+
+.modifyTitle {
+  margin-left: 1.6rem;
+}
+
+.modify__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: -1.2rem;
+  margin-top: 1rem;
+  min-width: 60%;
+}
+
+.modify__form input {
+  padding: 10px 25px;
+
+  height: 48px;
+  border: 1px solid #e2e2e2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 300px;
+}
+
+.modify__form select {
+  height: 48px;
+  padding: 0px 10px;
+  border: 1px solid #e2e2e2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  margin-top: 10px;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-left: 1.5rem;
+}
+
+.row {
+  width: 80% !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.row.fourthRow input {
+  width: 100%;
+}
+.modify__form textarea {
+  padding: 10px 25px;
+
+  height: 230px;
+  border: 1px solid #e2e2e2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 100%;
+}
+.modify__form textarea::placeholder,
+.modify__form input::placeholder {
+  color: rgba(152, 176, 190, 1);
+  font-family: 'DM sans';
+}
+
+.modify__form input[type='checkbox'] {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  width: 2rem;
+  box-shadow: none;
+}
+.modify__form input[type='checkbox'] ~ label {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.modify__form input[type='checkbox']::after {
+  margin-left: 1rem !important;
+}
+.modify__form button {
+  width: 5rem;
+  height: 40px;
+  border-radius: 8px !important;
+  margin-left: 1.2rem;
+}
+
+input#cv1 {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+#cv1 + label {
+  height: 30px;
+  border-radius: 8px;
+
+  border: none;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #114be0;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 6rem;
+  color: #fff !important;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#cv1:focus + label,
+#cv1 + label:hover {
+  background-color: #fff;
+  border: 1px solid #114be0;
+  color: #114be0 !important;
+}

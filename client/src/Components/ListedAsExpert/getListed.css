@@ -1,0 +1,142 @@
+.getListed {
+  min-width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+}
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 50%;
+}
+#fileno {
+  color: #114be0;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.form-container form input {
+  padding: 10px 25px;
+
+  height: 30px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 300px;
+}
+
+.form-container form input::placeholder {
+  color: rgba(152, 176, 190, 1);
+}
+
+.form-container select {
+  height: 50px;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 16px;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  margin-top: 10px;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(152, 176, 190, 1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.form-container select::-ms-expand {
+  display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+}
+
+.area {
+  width: 150px !important;
+}
+.specialinterest {
+  width: 400px !important;
+}
+input#cv {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+#cv + label {
+  height: 30px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 6rem;
+  color: rgba(13, 62, 224, 0.4);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#cv:focus + label,
+#cv + label:hover {
+  background-color: #114be0;
+  color: #fff;
+}
+
+.form-container form {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.firstRow,
+.secondRow,
+.thirdRow,
+.fourthRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.form-container form button {
+  background: #114be0;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  align-self: center;
+  width: 8rem;
+  padding: 10px 20px;
+  margin-top: 40px;
+}
+
+.form-container form button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  color: #114be0;
+  border: 2px solid rgba(13, 62, 224, 0.4);
+}

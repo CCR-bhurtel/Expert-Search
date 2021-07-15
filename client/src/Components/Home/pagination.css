@@ -1,0 +1,27 @@
+.pagination-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2rem;
+}
+
+.pagination-container a {
+  color: rgba(24, 56, 76, 1);
+  font-size: 1.2rem;
+}
+
+.pagination-container a:not(:first-child) {
+  margin-left: 0.4rem;
+}
+
+.pagination-container a:hover {
+  color: #114be0;
+  font-weight: 500;
+}
+
+.pagination-container a.active {
+  color: #114be0;
+  font-weight: 500;
+}

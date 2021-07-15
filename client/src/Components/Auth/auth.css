@@ -1,0 +1,96 @@
+#login,
+#signup {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw !important;
+
+  overflow: hidden;
+  position: absolute;
+  display: 'none';
+  z-index: -1;
+}
+
+.form {
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  border-radius: 15px;
+  min-width: 400px;
+  position: relative;
+}
+
+.remove {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-weight: bold;
+}
+.remove:hover {
+  color: #ff0000;
+  cursor: pointer;
+}
+.form .form-title {
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+  padding: 0 1.5rem;
+}
+
+.input-group,
+button {
+  width: 100%;
+  margin-top: 0.7rem;
+  height: 40px;
+}
+.btn-primary {
+  background: #114be0;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  color: #114be0;
+  border: 2px solid rgba(13, 62, 224, 0.4);
+}
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group input {
+  height: 100%;
+  border: 2px solid rgba(25, 49, 60, 0.1);
+  outline: none;
+  border-radius: 8px;
+  width: 85%;
+  padding: 0 20px;
+}
+input:focus {
+  border: 2px solid rgba(13, 62, 224, 0.4);
+}
+.my-1 {
+  margin-top: 3rem;
+}
+
+.my-1:hover {
+  color: #114be0;
+  cursor: pointer;
+}
