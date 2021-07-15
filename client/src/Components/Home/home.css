@@ -218,7 +218,7 @@
 .inputElements:focus-within ~ .resultElements {
   opacity: 1;
   pointer-events: all;
-  display: block;
+  /* display: block; */
 }
 .resultElements {
   opacity: 1;
@@ -239,6 +239,9 @@
 
 .resultElement {
   padding: 10px 25px;
+}
+.resultElement:last-child {
+  padding-bottom: 1rem;
 }
 .resultElement:hover {
   color: #114be0;
