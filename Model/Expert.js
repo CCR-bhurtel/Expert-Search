@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const expertSchema = mongoose.Schema({
+const expertSchema = new mongoose.Schema({
   salutation: {
     type: String,
-    default: 'Dr',
+    default: "Dr",
     required: true,
   },
   Fname: {
@@ -27,8 +27,8 @@ const expertSchema = mongoose.Schema({
   },
   medicoLegalSecrtaryPhone: {
     type: String,
-    unique: [true, 'The phone number is already taken'],
-    required: [true, 'Please enter phone number'],
+    unique: [true, "The phone number is already taken"],
+    required: [true, "Please enter phone number"],
   },
   medicoLegalPostcode1: String,
   GMC: Number,
@@ -43,8 +43,8 @@ const expertSchema = mongoose.Schema({
   medicoLegalSummary: {
     type: String,
     default:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia veritatis praesentium libero cumque placeat vitae natus fugiat et nesciunt officia velit est animi sed dolor, iste, id ullam ipsum. Ducimus at aperiam nostrum itaque adipisci labore saepe expedita optio quae?',
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia veritatis praesentium libero cumque placeat vitae natus fugiat et nesciunt officia velit est animi sed dolor, iste, id ullam ipsum. Ducimus at aperiam nostrum itaque adipisci labore saepe expedita optio quae?",
   },
 });
 
-module.exports = Expert = mongoose.model('Expert', expertSchema);
+module.exports = Expert = mongoose.model("Expert", expertSchema);

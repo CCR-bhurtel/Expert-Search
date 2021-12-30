@@ -1,29 +1,29 @@
-const mongoose = require('mongoose');
-const app = require('./app');
-const dotenv = require('dotenv');
+const mongoose = require("mongoose");
+const app = require("./app");
+const dotenv = require("dotenv");
 
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 
-dotenv.config({ path: './config.env' });
+dotenv.config({ path: "./config.env" });
 
-if (process.env.NODE_ENV == 'production') {
+if (process.env.NODE_ENV == "production") {
   // Set static folder
-  app.use(express.static(__dirname + '/client/build'));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  app.use(express.static(__dirname + "/client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
 
-process.on('uncaughtException', (err) => {
-  console.log('Uncaught exception: shutting down the app');
+process.on("uncaughtException", (err) => {
+  console.log("Uncaught exception: shutting down the app");
   console.log(err.name, err.message);
   process.exit(1);
 });
 
-process.on('unhandledRejection', (err) => {
+process.on("unhandledRejection", (err) => {
   console.log(err.name, err.message);
-  console.log('UNHANDLED REJECTION: Shutting down the app');
+  console.log("UNHANDLED REJECTION: Shutting down the app");
   server.close(() => {
     process.exit(1);
   });
@@ -48,7 +48,7 @@ const connectDB = async () => {
           console.log(`LISTENING TO REQUESTS IN PORT ${PORT}`)
         );
       });
-    console.log('Connected to the database');
+    console.log("Connected to the database");
   } catch (err) {
     console.error(err.message);
 
