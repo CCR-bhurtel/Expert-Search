@@ -1,20 +1,20 @@
-const express = require('express');
-const User = require('../../Model/User');
-const AppError = require('../../Utils/appError');
-const { createSendToken } = require('./auth');
-const catchAsync = require('../../Utils/catchAsync');
+const express = require("express");
+const User = require("../../Model/User");
+const AppError = require("../../Utils/appError");
+const { createSendToken } = require("./auth");
+const catchAsync = require("../../Utils/catchAsync");
 const router = express.Router();
-const adminProtect = require('../../Middlewares/adminProtect');
-const authProtect = require('../../Middlewares/authProtect');
-const { userIndex } = require('../../algolia');
+const adminProtect = require("../../Middlewares/adminProtect");
+const authProtect = require("../../Middlewares/authProtect");
+const { userIndex } = require("../../algolia");
 
 router.post(
-  '/',
+  "/",
   catchAsync(async (req, res, next) => {
     //   Return the json web token as a cookie
     const { email, name, password, passwordConfirm } = req.body;
     if (!email || !name || !password || !passwordConfirm)
-      return next(new AppError('Please input all fields', 400));
+      return next(new AppError("Please input all fields", 400));
 
     req.body.approved = false;
     req.body.admin = false;
@@ -24,8 +24,9 @@ router.post(
     createSendToken(user, res, 201);
   })
 );
+
 router.get(
-  '/getUnapproved',
+  "/getUnapproved",
   authProtect,
   adminProtect,
   catchAsync(async (req, res, next) => {
@@ -37,7 +38,7 @@ router.get(
 );
 
 router.put(
-  '/approve',
+  "/approve",
   authProtect,
   adminProtect,
   catchAsync(async (req, res) => {
@@ -56,7 +57,7 @@ router.put(
 );
 
 router.put(
-  '/deleteUser',
+  "/deleteUser",
   authProtect,
   adminProtect,
   catchAsync(async (req, res) => {
@@ -65,7 +66,7 @@ router.put(
     await userIndex.deleteObject(req.body.id);
 
     res.status(204).json({
-      user: '',
+      user: "",
     });
   })
 );
